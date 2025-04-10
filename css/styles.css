@@ -1,0 +1,305 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #030202;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ff6b6b;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: rgb(9, 6, 6);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-image {
+    width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin-top: 20px; /* Space between text and image */
+}
+
+#hero h1 {
+    font-size: 3em;
+}
+
+#hero pre {
+    font-size: 1.5em;
+}
+
+.btn {
+    background-color: #050303;
+    color: rgb(248, 247, 247);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4757;
+}
+
+/* Features Section */
+#features {
+    background-color: white;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature {
+    width: 30%;
+    background-color: #ff6b6b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(242, 241, 241, 0.1);
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.feature h3 {
+    margin: 10px 0;
+}
+
+.feature p {
+    color: #080101;
+}
+
+/* Menu Section */
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+}
+
+.menu-item span {
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+/* Form Section */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+}
+
+/* Restaurants Section */
+#restaurants {
+    background-color: #fff;
+    padding: 50px;
+}
+
+.restaurants-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.restaurant {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.restaurant img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.restaurant h3 {
+    margin: 10px 0;
+}
+
+.restaurant p {
+    color: #777;
+}
+
+.restaurant .btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.restaurant .btn:hover {
+    background-color: #ff4757;
+}
+
+/* Login Section */
+#login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-section label {
+    margin-bottom: 5px;
+}
+
+#login-section input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-section .btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-section .btn:hover {
+    background-color: #ff4757;
+}
+
+#login-section p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styles for Password Validation */
+#password-requirements {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: red;
+    font-size: 0.9em;
+}
+
+#password-requirements li.invalid {
+    color: red;
+}
+
+#password-requirements li.valid {
+    color: green;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6b6b;
+    color: rgb(7, 3, 3);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-container, .menu-container, .restaurants-container {
+        flex-direction: column;
+    }
+
+    .menu-item, .feature, .restaurant {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    #login-section {
+        width: 90%;
+    }
+}

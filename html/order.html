@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="order">
+        <h2>Order Your Favorite Meal</h2>
+
+        <form action="submit_order.html" method="POST">
+            <label for="restaurant">Choose a Restaurant:</label>
+            <select id="restaurant" name="restaurant" required>
+                <option value="grill-house">Grill House</option>
+                <option value="italian-bistro">Italian Bistro</option>
+                <option value="sushi-paradise">Sushi Paradise</option>
+                <option value="healthy-eats">Healthy Eats</option>
+                <option value="spice-delight">Spice Delight</option>
+                <option value="mexican-fiesta">Mexican Fiesta</option>
+            </select>
+
+            <div id="menu-items">
+                <h3>Menu Items:</h3>
+                <div id="grill-house" class="menu" style="display:none;">
+                    <label>Tandoori Chicken - $12.99</label><br>
+                    <input type="number" name="grill_house_tandoori" min="0" placeholder="Quantity"><br>
+
+                    <label>Grilled Salmon - $15.99</label><br>
+                    <input type="number" name="grill_house_salmon" min="0" placeholder="Quantity"><br>
+
+                    <label>Steak Fajitas - $16.99</label><br>
+                    <input type="number" name="grill_house_fajitas" min="0" placeholder="Quantity"><br>
+                </div>
+
+                <div id="italian-bistro" class="menu" style="display:none;">
+                    <label>Spaghetti Carbonara - $13.49</label><br>
+                    <input type="number" name="italian_bistro_carbonara" min="0" placeholder="Quantity"><br>
+
+                    <label>Margherita Pizza - $11.99</label><br>
+                    <input type="number" name="italian_bistro_pizza" min="0" placeholder="Quantity"><br>
+
+                    <label>Tiramisu - $6.99</label><br>
+                    <input type="number" name="italian_bistro_tiramisu" min="0" placeholder="Quantity"><br>
+                </div>
+
+                <div id="sushi-paradise" class="menu" style="display:none;">
+                    <label>California Roll - $9.99</label><br>
+                    <input type="number" name="sushi_paradise_california" min="0" placeholder="Quantity"><br>
+
+                    <label>Spicy Tuna Roll - $12.49</label><br>
+                    <input type="number" name="sushi_paradise_tuna" min="0" placeholder="Quantity"><br>
+
+                    <label>Sashimi Platter - $20.99</label><br>
+                    <input type="number" name="sushi_paradise_sashimi" min="0" placeholder="Quantity"><br>
+                </div>
+
+                <div id="healthy-eats" class="menu" style="display:none;">
+                    <label>Quinoa Salad - $10.99</label><br>
+                    <input type="number" name="healthy_eats_quinoa" min="0" placeholder="Quantity"><br>
+
+                    <label>Grilled Chicken Bowl - $12.99</label><br>
+                    <input type="number" name="healthy_eats_chicken" min="0" placeholder="Quantity"><br>
+
+                    <label>Fruit Smoothie - $5.99</label><br>
+                    <input type="number" name="healthy_eats_smoothie" min="0" placeholder="Quantity"><br>
+                </div>
+
+                <div id="spice-delight" class="menu" style="display:none;">
+                    <label>Butter Chicken - $13.99</label><br>
+                    <input type="number" name="spice_delight_butter" min="0" placeholder="Quantity"><br>
+
+                    <label>Vegetable Biryani - $11.49</label><br>
+                    <input type="number" name="spice_delight_biryani" min="0" placeholder="Quantity"><br>
+
+                    <label>Mango Lassi - $3.99</label><br>
+                    <input type="number" name="spice_delight_lassi" min="0" placeholder="Quantity"><br>
+                </div>
+
+                <div id="mexican-fiesta" class="menu" style="display:none;">
+                    <label>Tacos al Pastor - $9.99</label><br>
+                    <input type="number" name="mexican_fiesta_tacos" min="0" placeholder="Quantity"><br>
+
+                    <label>Chicken Enchiladas - $11.49</label><br>
+                    <input type="number" name="mexican_fiesta_enchiladas" min="0" placeholder="Quantity"><br>
+
+                    <label>Guacamole with Tortilla Chips - $6.99</label><br>
+                    <input type="number" name="mexican_fiesta_guacamole" min="0" placeholder="Quantity"><br>
+                </div>
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FastFood Express. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('restaurant').addEventListener('change', function() {
+            var selectedRestaurant = this.value;
+            var menus = document.querySelectorAll('.menu');
+
+            menus.forEach(function(menu) {
+                menu.style.display = 'none'; // Hide all menus
+            });
+
+            document.getElementById(selectedRestaurant).style.display = 'block'; // Show selected restaurant menu
+        });
+    </script>
+</body>
+</html>
